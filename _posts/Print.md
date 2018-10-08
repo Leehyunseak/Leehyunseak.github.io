@@ -3,10 +3,10 @@ layout: post
 title:  "1주차 트리 만들기 예제"
 date:   2018-10-08 23:09:13
 categories: Data_science
-permalink: /archivers/python_lecture_03
+permalink: /archivers/python_lecture_02
 ---
 
-# 2018-10-08-트리만들기 예제.md
+# 2018-10-08-Print.md
 
 ## Print 예제 활용 
 
