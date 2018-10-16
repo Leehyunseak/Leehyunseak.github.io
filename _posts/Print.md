@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "1주차 트리만들기"
-date:   2018-10-02 16:09:13
+date:   2018-10-08 16:09:13
 categories: Data_science
 permalink: /archivers/python_lecture_03
 ---
