@@ -6,16 +6,13 @@ div.gallery {
     float: left;
     width: 180px;
 }
-
 div.gallery:hover {
     border: 1px solid #777;
 }
-
 div.gallery img {
     width: 100%;
     height: auto;
 }
-
 div.desc {
     padding: 15px;
     text-align: center;
@@ -26,13 +23,15 @@ div.desc {
 <div class="col-box col-box-author">
   <!--
   <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}">
+  -->
   <div class="col-box-title name">{{ site.author }}</div>
-  -->
   <!--
-  
+  <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="yunho0130"><a class="LI-simple-link" href='https://kr.linkedin.com/in/yunho0130?trk=profile-badge'>Yunho Maeng</a></div>
   -->
-  <!-- Profile Image -->
+<!-- Profile Image -->
 <img src="https://avatars2.githubusercontent.com/u/42957435?s=400&v=4" alt="Smiley face" height="120" width="120">
+    <p>{{ site.profile }}</p>
+  <p class="contact">
     {% if site.twitter_username %}
     <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
     {% endif %}
@@ -55,19 +54,16 @@ div.desc {
   </a>
   <div class="desc">222Add a description of the image here</div>
 </div>
-
 <div class="gallery">
   <a target="_blank" href="forest.jpg">
     <img src="forest.jpg" alt="Forest" width="150" height="200">
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
-
 </body>
 </html> 
   </p>
 </div>
-
 <br>
 -->
 <!-- col-box-line -->
