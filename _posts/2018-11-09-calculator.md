@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2주차 계산기"
-date:   2018-11-09 16:09:13
+date:   2018-11-09 15:09:13
 categories: Data_science
 permalink: /archivers/python_lecture_04
 ---
