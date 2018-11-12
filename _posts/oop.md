@@ -1,0 +1,181 @@
+---
+layout: post
+title:  "5주차 OOP"
+date:   2018-11-09 16:09:13
+categories: Data_science
+permalink: /archivers/python_lecture_07
+---
+
+# 2018-11-09-OOP.md
+
+## OOP(Object-Oriented_Programming)
+	- OOP는 컴퓨터 프로그래밍의 패러다임의 하나이다.
+	- 프로그래밍은 프로그램을 명령어의 목록으로 보는 시각에서 벗어나 독립된 단위로 파악하고자 한 것 이다.
+	- Class라는 단위에 Instance라는 객체 존재.
+		ex. class(game,beer,smart_phone)-instance(Pokemon,blanc,sony_experia)
+
+## OOP예제
+	- 클래스 파스칼 표기법
+	- self > c++ this / java pointer / c# this
+	- 클래서 안에 함수가 선언되엉 있으면 해당함수를 Method라고한다.
+
+```python
+# -*- coding: utf-8 -*-
+
+#oop
+class pokemon :
+    def __init__(self,name):
+        self.name = name
+    def buy_new(self) :
+        print 'I do not want buy', self.name
+    def will_buy(self) :
+        print ('I want buy new_version eevee')
+        
+P = pokemon('pikachu')
+P.buy_new()
+P.will_buy()
+```
+
+##duck_typing
+
+```python
+# -*- coding: utf-8 -*-
+
+class pikachu:
+    def cry(self) : print "pika pika"
+    def signature_move(self) : print "pikachu has Thunderbolt"
+class ditto:
+    def cry(self) : print "meta meta"
+    def signature_move(self) : print "Ditto has Transform"
+        
+def in_the_sunmoon(pikachu):
+    pikachu.cry
+    pikachu.signature_move()
+    
+def game() :
+    pikachu1 = pikachu()
+    ditto1 = ditto()
+    in_the_sunmoon(pikachu1)
+    in_the_sunmoon(ditto1)
+    
+def main():
+    game()
+    
+if __name__=='__main__' :
+    main()
+    ```
+
+
+##하이브리드 자동차 만들기
+```python
+# -*- coding: utf-8 -*-
+# Car Class 
+
+class car :
+    def __init__(self, model_name):
+        self.model_name = model_name
+
+# Stop 
+    def stop(self):
+        # Engine Stop
+        print "engine stop."
+# Start 
+    def start(self):
+        # Engine Run
+        print "engine start."
+# Run
+    def run(self):
+        # drive
+        print "drive."
+# Break
+    def break_pad(self):
+        # break
+        print "break_pad."
+# Get Car name 
+    def get_car_name(self):
+        print self.model_name + "is running."
+
+# ElectricCar Class
+class ElectricCar():
+    def __init__(self, model_name):
+        self.model_name = model_name
+#stop
+    def stop(self):
+#Motor Stop
+        print "Motor Stop"
+#start
+    def start(self):
+#Motor start
+        print "Motro start"
+#run
+    def run(self):
+#Drive
+        print "Drive"
+#break
+    def break_pad(self):
+#Break
+        print"break_pad"
+#Battery Charge
+        print "battery Charge"
+# Get Car name 
+    def get_car_name(self):
+        print self.model_name + "is running."
+
+    
+# HybridCar Class
+class hybridCar(car, ElectricCar):
+    def __init__(self, model_name):
+        self.model_name = model_name
+# Stop 
+    def stop(self) :
+        car.stop(self)
+        ElectricCar.stop(self)
+# Engine Stop
+# Motor stop
+# Start 
+    def start(self) : 
+        car.start(self)
+        ElectricCar.start(self)
+# Run
+    def run(self) : 
+        car.run(self)
+        ElectricCar.stop(self)
+# Run
+# drive
+# Break
+    def break_pad(self) : 
+        car.break_pad(self)
+        ElectricCar.break_pad(self)
+# break
+# batteryCharge    
+# Get Car name 
+    def get_car_name(self):
+        print self.model_name + "is running."    
+
+def main():
+    print "it is main."
+    normal_car_1 = car("engine1")
+    normal_car_1.get_car_name()
+    normal_car_1.stop()
+    normal_car_1.start()
+    normal_car_1.run()
+    normal_car_1.break_pad()
+    
+    Electric_car_1 = ElectricCar("ElectricCar1")
+    Electric_car_1.get_car_name()
+    Electric_car_1.stop()
+    Electric_car_1.start()
+    Electric_car_1.run()
+    Electric_car_1.break_pad()
+
+
+    hybrid_car_1 = hybridCar("HybridCar1")
+    hybrid_car_1.get_car_name()
+    hybrid_car_1.stop()
+    hybrid_car_1.start()
+    hybrid_car_1.run()
+    hybrid_car_1.break_pad()
+    
+if __name__ == '__main__':
+    main()
+ ```
