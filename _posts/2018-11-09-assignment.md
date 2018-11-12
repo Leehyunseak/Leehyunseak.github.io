@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "assignment "
-date:   2018-11-09 16:09:13
+date:   2018-11-09 19:09:13
 categories: Data_science
 permalink: /archivers/python_lecture_08
 ---
