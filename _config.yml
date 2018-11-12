@@ -15,7 +15,7 @@ github_username: leehyunseak
 
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
-disqus_url:https://disqus.com/by/disqus_8GHeF5idWX/
+disqus_url: https://disqus.com/by/disqus_8GHeF5idWX/
 disqus_id : disqus_8GHeF5idWX
 # get one: https://disqus.com/admin/signup/
 #duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
