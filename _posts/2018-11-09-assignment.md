@@ -8,7 +8,7 @@ permalink: /archivers/python_lecture_08
 
 # 2018-11-09-assignment.md
 
-##일반 계산기 만들기
+## 일반 계산기 만들기
 
 ```python
 # -*- coding: utf-8 -*-
@@ -155,7 +155,7 @@ while True :
             print 'Thanks'
             break
 ```
-##Dict
+## Dict
 
 ```python
 # -*- coding: utf-8 -*-
@@ -176,12 +176,12 @@ for ab, number in ab.items():
 print ab
 
 ```
-#보충설명
+# 보충설명
 	- 3개의 print ab 중에서 마지막 하나가 다르다. 
 	- 차이는 for문에서 두번쨰 ab와 연결된 for 문에서 key를 사용했고, 차이가 있는 ab는 for 문에서 ab를 사용한 것 이다.
 
 
-##전화번호부 만들기
+## 전화번호부 만들기
 
 ```python
 # -*- coding: utf-8 -*-
@@ -197,7 +197,7 @@ for key in aa.keys():
 
 ```
 
-##랜덤스킬데미지
+## 랜덤스킬데미지
 	-스킬 레벨이 1일 때, 파이어 볼 데미지는 30-60 사이의 랜덤값을 지니며, 라이트닝 데미지는 1-99 사이의 랜덤값을 지닌다. 각 스킬을 30까지 올렸을 때, 10000회 시행시 어떤 스킬의 평균 데미지가 높은지 구하시오.
 	-스킬 레빌이 1올라갈 때, 데미지 최솟값, 최댓값이 1씩 증가한다.
 
@@ -225,7 +225,7 @@ while  True :
 
 ```
 
-##duck_typing
+## duck_typing
 
 ```python
 # -*- coding: utf-8 -*-
@@ -252,10 +252,10 @@ def main():
     
 if __name__=='__main__' :
     main()
-    ```
+   ```
 
 
-##하이브리드 자동차 만들기
+## 하이브리드 자동차 만들기
 ```python
 # -*- coding: utf-8 -*-
 # Car Class 
