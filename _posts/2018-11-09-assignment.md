@@ -113,35 +113,50 @@ coke = 3
 cider = 2
 coffee = 1
 cost=0
-coke_ja=10
+coke_ja= 10
 cider_ja=10
 coffee_ja=10
 item = 0
 
 while True :
-    if coke_ja==0 and cider_ja ==0 and coffee_ja ==0 :
+    if coke_ja<=0 and cider_ja <=0 and coffee_ja <=0 :
         print "we don't have anything"
         break
     else :
         print '1.coke {} 2.cider {} 3. coffee {}'.format(coke_ja,cider_ja,coffee_ja)
         want = int(raw_input('what You want? '))
-        number = int(raw_input('How many do you need?'))
-
+        number = int(raw_input('How many do you need?'))           
     if want == 1 :
         print 'it is {}doller'.format((coke)*number)
         coke_ja = coke_ja-number
         item = 'coke'
-        cost = 3*number
+        
+        if coke_ja < 0 : 
+            print "we dont have enough coke" 
+            coke_ja = coke_ja+number
+            continue
+        else :
+            cost = 3*number
     elif want == 2: 
         print 'it is {}doller'.format((cider)*number)
         cider_ja=cider_ja-number
         item='cider'
         cost = 2*number
+        if cider_ja < 0 : 
+            print "we dont have enough cider" 
+            cider_ja = cider_ja+number
+            continue
+        else : cost= 2*number
     else :
         print 'it is {}doller'.format((coffee)*number)
         coffee_ja=coffee_ja-number
         item='coffee'
-        cost =1*number
+        if coffee_ja < 0 : 
+            print "we dont have enough coffee" 
+            coffee_ja = coffee_ja+number
+            cost =1*number 
+            continue
+        else : cost =1*number
     while True :   
         machl = int(raw_input('How much will it cost? '))
         if machl == cost :
@@ -176,7 +191,7 @@ for ab, number in ab.items():
 print ab
 
 ```
-# 보충설명
+# Dict 보충설명
 	- 3개의 print ab 중에서 마지막 하나가 다르다. 
 	- 차이는 for문에서 두번쨰 ab와 연결된 for 문에서 key를 사용했고, 차이가 있는 ab는 for 문에서 ab를 사용한 것 이다.
 
