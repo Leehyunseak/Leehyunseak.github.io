@@ -127,18 +127,16 @@ while True :
         want = int(raw_input('what You want? '))
         number = int(raw_input('How many do you need?'))           
     if want == 1 :
-        print 'it is {}doller'.format((coke)*number)
         coke_ja = coke_ja-number
         item = 'coke'
-        
         if coke_ja < 0 : 
             print "we dont have enough coke" 
             coke_ja = coke_ja+number
             continue
         else :
             cost = 3*number
+            print 'it is {}doller'.format((coke)*number)
     elif want == 2: 
-        print 'it is {}doller'.format((cider)*number)
         cider_ja=cider_ja-number
         item='cider'
         cost = 2*number
@@ -146,9 +144,10 @@ while True :
             print "we dont have enough cider" 
             cider_ja = cider_ja+number
             continue
-        else : cost= 2*number
+        else : 
+            cost= 2*number
+            print 'it is {}doller'.format((cider)*number)
     else :
-        print 'it is {}doller'.format((coffee)*number)
         coffee_ja=coffee_ja-number
         item='coffee'
         if coffee_ja < 0 : 
@@ -156,7 +155,9 @@ while True :
             coffee_ja = coffee_ja+number
             cost =1*number 
             continue
-        else : cost =1*number
+        else : 
+            cost =1*number
+            print 'it is {}doller'.format((coffee)*number)
     while True :   
         machl = int(raw_input('How much will it cost? '))
         if machl == cost :
