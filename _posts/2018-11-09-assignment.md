@@ -161,7 +161,7 @@ while True :
     while True :   
         machl = int(raw_input('How much will it cost? '))
         if machl == cost :
-            print 'You get {}ea {}'.format(unmber,item)
+            print 'You get {}ea {}'.format(number,item)
             print 'Thanks'
             break
         elif machl < cost : 
